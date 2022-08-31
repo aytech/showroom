@@ -5,6 +5,7 @@ showroom.zip
 .env
 .idea
 .venv
+.vscode
 ui/dist
 showroom/logs
 showroom/static
