@@ -109,6 +109,25 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
+LOCALES_ROOT = APP_DIR / 'static' / 'locales'
+STATIC_ROOT = APP_DIR / 'static'
+STATIC_ASSETS = APP_DIR / 'static' / 'static'
+STATICFILES_DIRS = (
+    BASE_DIR / 'ui' / 'dist',
+)
+MEDIA_URL = '/media/'
+MEDIA_ROOT = APP_DIR / 'media'
+
+LOCALE_PATHS = [
+    BASE_DIR / 'locale'
+]
+
+GRAPHENE = {
+    'SCHEMA': 'api.schema.schema',
+    'MIDDLEWARE': [
+        'graphql_jwt.middleware.JSONWebTokenMiddleware',
+    ],
+}
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
