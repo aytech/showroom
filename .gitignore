@@ -1,0 +1,10 @@
+**/__pycache__/
+**/node_modules/
+*.sqlite3
+showroom.zip
+.env
+.idea
+.venv
+ui/dist
+showroom/logs
+showroom/static
