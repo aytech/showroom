@@ -3,10 +3,12 @@ from time import strftime
 
 from .base import *
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'showroom.pythonanywhere.com'
+]
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 GRAPHIQL_AVAILABLE = False
 

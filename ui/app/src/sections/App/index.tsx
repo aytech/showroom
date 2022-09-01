@@ -1,5 +1,4 @@
 import './styles.css'
-import navbarLogo from './assets/navbar-logo.svg'
 import closeIcon from './assets/close-icon.svg'
 import portfolio1 from './assets/portfolio/1.jpg'
 import portfolio2 from './assets/portfolio/2.jpg'
@@ -40,8 +39,7 @@ export const App = () => {
             бренд
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarResponsive" aria-label="Toggle navigation">
-            меню
-            <FontAwesomeIcon icon={ faBars } />
+            <FontAwesomeIcon icon={ faBars } size="2x" />
           </Navbar.Toggle>
           <Navbar.Collapse id="navbarResponsive">
             <Nav className=" text-uppercase ms-auto py-4 py-lg-0">
