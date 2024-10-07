@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-rm --force showroom.zip &&
+rm -f showroom.zip &&
   (cd ui/app && PUBLIC_URL=/static BUILD_PATH=../dist yarn build) &&
   zip -r \
     --exclude=*.git* \

@@ -2,6 +2,7 @@
 **/node_modules/
 *.sqlite3
 showroom.zip
+.DS_Store
 .env
 .idea
 .venv
