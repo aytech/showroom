@@ -18,51 +18,20 @@ import google from './assets/logos/google.svg'
 import ibm from './assets/logos/ibm.svg'
 import microsoft from './assets/logos/microsoft.svg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faCircle, faLaptop, faLock, faPlus, faShoppingCart, faXmark } from '@fortawesome/free-solid-svg-icons'
+import { faCircle, faLaptop, faLock, faPlus, faShoppingCart, faXmark } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react'
-import { Modal, Nav, Navbar } from 'react-bootstrap'
+import { Modal } from 'react-bootstrap'
 import { faFacebookF, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { Navigation } from '../Navigation'
 
 export const App = () => {
 
-  const [ navbarClassName, setNavbarClassName ] = useState<string>("")
   const [ showModal, setShowModal ] = useState<boolean>(false)
   const [ modalImage, setModalImage ] = useState<string>()
 
-  window.addEventListener("scroll", () => setNavbarClassName(window.scrollY !== 0 ? "navbar-shrink" : ""))
-
   return (
     <>
-      <Navbar expand="lg" variant="dark" fixed="top" id="mainNav" className={ navbarClassName }>
-        <div className="container">
-          <Navbar.Brand href="#page-top">
-            бренд
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="navbarResponsive" aria-label="Toggle navigation">
-            <FontAwesomeIcon icon={ faBars } size="2x" />
-          </Navbar.Toggle>
-          <Navbar.Collapse id="navbarResponsive">
-            <Nav className=" text-uppercase ms-auto py-4 py-lg-0">
-              <Nav.Item>
-                <Nav.Link href="#services">услуги</Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link href="#portfolio">портфолио</Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link href="#about">о нас</Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link href="#team">команда</Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link href="#contact">контакт</Nav.Link>
-              </Nav.Item>
-            </Nav>
-          </Navbar.Collapse>
-        </div>
-      </Navbar>
-      {/* Masthead */ }
+      <Navigation />
       <header className="masthead">
         <div className="container">
           <div className="masthead-subheading">добро пожаловать!</div>
@@ -70,7 +39,6 @@ export const App = () => {
           <a className="btn btn-primary btn-xl text-uppercase" href="#services">услуги</a>
         </div>
       </header>
-      {/* Services */ }
       <section className="page-section" id="services">
         <div className="container">
           <div className="text-center">
