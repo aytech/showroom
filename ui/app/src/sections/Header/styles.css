@@ -1,0 +1,8 @@
+.no-decoration-dropdown .dropdown-toggle::after {
+  display: none;
+}
+
+.no-decoration-dropdown .dropdown-toggle>span {
+  font-weight: 500 !important;
+  text-decoration: none !important;
+}
