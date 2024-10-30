@@ -1,3 +1,35 @@
+@media (max-width: 999px) {
+  .info-action {
+    display: none !important;
+  }
+}
+
+.navbar-toggler {
+  font-size: 18px;
+  background-color: transparent;
+  border: none;
+  padding: 0.2rem;
+}
+
+button.button-link {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+button.button-link,
+button.button-link:active,
+button.button-link:hover,
+button.button-link:focus-visible {
+  box-shadow: none;
+  color: #353535;
+  outline: none;
+}
+
+button.navbar-toggler:focus {
+  box-shadow: none;
+}
+
 .no-decoration-dropdown .dropdown-toggle::after {
   display: none;
 }

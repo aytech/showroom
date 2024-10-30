@@ -1,0 +1,1 @@
+unzip -o showroom.zip && python manage.py collectstatic --settings=showroom.settings.production

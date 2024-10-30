@@ -1,13 +1,12 @@
-import { faBars, faEnvelope, faMagnifyingGlass, faPhone, faShoppingCart, faUserAlt } from "@fortawesome/free-solid-svg-icons"
+import { faEnvelope, faMagnifyingGlass, faPhone, faShoppingCart, faUserAlt } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { useState } from "react"
-import { Dropdown } from "react-bootstrap"
+import { Button, Container, Dropdown, Nav, Navbar } from "react-bootstrap"
 import "./styles.css"
 
 export const Header = () => {
 
   const [ navbarClassName, setNavbarClassName ] = useState<string>( "" )
-
   window.addEventListener( "scroll", () => setNavbarClassName( window.scrollY !== 0 ? "navbar-shrink" : "" ) )
 
   return (
@@ -34,10 +33,10 @@ export const Header = () => {
                   <FontAwesomeIcon icon={ faEnvelope } style={ { color: '#ffa500' } } />&nbsp;studio@konsepti.com
                 </li>
               </ul>
-              <ul className="d-flex flex-wrap list-unstyled m-0 ">
+              <ul className="info-action d-flex flex-wrap list-unstyled m-0">
                 <li className="nav-item px-3 dropdown">
                   <Dropdown>
-                    <Dropdown.Toggle as="a">
+                    <Dropdown.Toggle className="button-link" variant="link">
                       <span className="fw-bold text-decoration-underline">CZ</span> Čeština
                     </Dropdown.Toggle>
 
@@ -48,97 +47,83 @@ export const Header = () => {
                   </Dropdown>
                 </li>
                 <li className="ms-4">
-                  <a href="#">
+                  <Button className="button-link" variant="link">
                     <FontAwesomeIcon icon={ faUserAlt } />
                     <span className="ms-1">Přihlásit</span>
-                  </a>
+                  </Button>
                 </li>
                 <li className="social ms-4">
-                  <a href="#">
+                  <Button className="button-link" variant="link">
                     <FontAwesomeIcon icon={ faShoppingCart } />
                     <span className="ms-1">Košík</span>
-                  </a>
+                  </Button>
                 </li>
               </ul>
             </div>
           </div>
         </nav>
-        <nav id="primary-header" className="navbar navbar-expand-lg py-4">
-          <div className="container-fluid padding-side">
-            <div className="d-flex justify-content-between align-items-center w-100">
-              <a className="navbar-brand" href="#">
-                <img src="https://place-hold.it/160x30&text=LOGO&bold" className="logo img-fluid" />
-              </a>
-              <button className="navbar-toggler border-0 d-flex d-lg-none order-3 p-2 shadow-none" type="button"
-                data-bs-toggle="offcanvas" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false">
-                <FontAwesomeIcon icon={ faBars } />
-              </button>
-              <div className="header-bottom offcanvas offcanvas-end " id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel">
-                <div className="offcanvas-header px-4 pb-0">
-                  <button type="button" className="btn-close btn-close-black mt-2" data-bs-dismiss="offcanvas"
-                    aria-label="Close" data-bs-target="#bdNavbar"></button>
-                </div>
-                <div className="offcanvas-body align-items-center justify-content-center">
-                  <div className="search d-block d-lg-none m-5">
-                    <form className=" position-relative">
-                      <input type="text" className="form-control bg-secondary border-0 rounded-5 px-4 py-2"
-                        placeholder="Search..." />
-                      <a href="#" className="position-absolute top-50 end-0 translate-middle-y p-1 me-3">
-                        <FontAwesomeIcon icon={ faMagnifyingGlass } />
-                      </a>
-                    </form>
-                  </div>
-                  <ul className="navbar-nav align-items-center mb-2 mb-lg-0">
-                    <li className="nav-item px-3">
-                      <a className="nav-link active p-0" aria-current="page" href="#">Bydlení</a>
-                    </li>
-                    <li className="nav-item px-3">
-                      <a className="nav-link p-0" href="#">Kancelář</a>
-                    </li>
-                    <li className="nav-item px-3">
-                      <a className="nav-link p-0" href="#">Zahrada</a>
-                    </li>
-                    <li className="nav-item px-3">
-                      <a className="nav-link p-0" href="#">Svítidla</a>
-                    </li>
-                    <li className="nav-item px-3">
-                      <a className="nav-link p-0" href="#">Doplňky</a>
-                    </li>
-                    <li className="nav-item px-3">
-                      <a className="nav-link p-0" href="#">Výprodej</a>
-                    </li>
-                    <li className="nav-item px-3">
-                      <a className="nav-link p-0" href="#">Bestsellery</a>
-                    </li>
-                    <li className="nav-item px-3 dropdown">
-                      { true && (
-                        <Dropdown className="no-decoration-dropdown">
-                          <Dropdown.Toggle as="a">
-                            <span className="fw-bold text-decoration-underline">...</span>
-                          </Dropdown.Toggle>
+        <Navbar id="primary-header" expand="lg" className={ `navbar navbar-expand-lg py-4 ${navbarClassName}` }>
+          <Container fluid className="padding-side">
+            <Navbar.Brand href="#">
+              <img
+                alt="Logo"
+                className="logo img-fluid"
+                src="https://placehold.co/160x30?text=Лого" />
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls="bdNavbar" className="primary-header-toggle" />
+            <Navbar.Collapse id="bdNavbar">
+              <Nav className="align-items-center mb-2 mb-lg-0 me-auto">
+                <Nav.Link href="#" className="px-3" active>
+                  Bydlení
+                </Nav.Link>
+                <Nav.Link href="#" className="px-3" active={ false }>
+                  Kancelář
+                </Nav.Link>
+                <Nav.Link href="#" className="px-3" active={ false }>
+                  Zahrada
+                </Nav.Link>
+                <Nav.Link href="#" className="px-3" active={ false }>
+                  Svítidla
+                </Nav.Link>
+                <Nav.Link href="#" className="px-3" active={ false }>
+                  Doplňky
+                </Nav.Link>
+                <Nav.Link href="#" className="px-3" active={ false }>
+                  Výprodej
+                </Nav.Link>
+                <Nav.Link href="#" className="px-3" active={ false }>
+                  Bestsellery
+                </Nav.Link>
+                <Nav.Link href="#" className="px-3" active={ false }>
+                  <Dropdown className="no-decoration-dropdown">
+                    <Dropdown.Toggle as="a">
+                      <span className="fw-bold text-decoration-underline">...</span>
+                    </Dropdown.Toggle>
 
-                          <Dropdown.Menu>
-                            <Dropdown.Item href="#/action-1">Designéři</Dropdown.Item>
-                            <Dropdown.Item href="#/action-2">Inspirace</Dropdown.Item>
-                            <Dropdown.Item href="#/action-3">Značky</Dropdown.Item>
-                          </Dropdown.Menu>
-                        </Dropdown>
-                      ) }
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="search d-lg-block d-none">
-                <form className=" position-relative">
-                  <input type="text" className="form-control bg-secondary border-0 rounded-5 px-4 py-2" placeholder="Search..." />
-                  <a href="#" className="position-absolute top-50 end-0 translate-middle-y p-1 me-3">
-                    <FontAwesomeIcon icon={ faMagnifyingGlass } />
-                  </a>
-                </form>
-              </div>
+                    <Dropdown.Menu>
+                      <Dropdown.Item href="#/action-1">Designéři</Dropdown.Item>
+                      <Dropdown.Item href="#/action-2">Inspirace</Dropdown.Item>
+                      <Dropdown.Item href="#/action-3">Značky</Dropdown.Item>
+                    </Dropdown.Menu>
+                  </Dropdown>
+                </Nav.Link>
+              </Nav>
+            </Navbar.Collapse>
+            <div className="search d-lg-block d-none">
+              <form className="position-relative">
+                <input type="text" className="form-control bg-secondary border-0 rounded-5 px-4 py-2" placeholder="Search..." />
+                <Button
+                  className="position-absolute top-50 end-0 translate-middle-y p-1 me-3"
+                  style={ { 
+                    color: "#212529"
+                   } }
+                  variant="link">
+                  <FontAwesomeIcon icon={ faMagnifyingGlass } />
+                </Button>
+              </form>
             </div>
-          </div>
-        </nav>
+          </Container>
+        </Navbar>
       </header>
     </>
   )

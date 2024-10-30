@@ -14,15 +14,24 @@ export const App = () => {
         <div className="container-fluid padding-side">
           <div className="row">
             <div className="col-sm-6" style={ { alignContent: "center", paddingBottom: "1rem" } }>
-              <img src="https://place-hold.it/1000x600" className="img-fluid" />
+              <img
+                alt="main"
+                className="img-fluid"
+                src="https://placehold.co/1000x600?text=Главная+картинка" />
             </div>
             <div className="col-sm-6">
               <div className="row">
                 <div className="col-sm-12 text-end" style={ { backgroundColor: "#fff", paddingBottom: "1rem" } }>
-                  <img src="https://place-hold.it/500x300" className="img-fluid" />
+                  <img
+                    alt="secondary"
+                    className="img-fluid"
+                    src="https://placehold.co/500x300?text=Второстепенная+картинка" />
                 </div>
                 <div className="col-sm-12 text-end" style={ { backgroundColor: "#fff", paddingBottom: "1rem" } }>
-                  <img src="https://place-hold.it/500x300" className="img-fluid" />
+                  <img
+                    alt="secondary"
+                    className="img-fluid"
+                    src="https://placehold.co/500x300?text=Второстепенная+картинка" />
                 </div>
               </div>
             </div>
@@ -32,20 +41,55 @@ export const App = () => {
 
       <section className="padding-large">
         <div className="row">
-          <div className="col-sm-2 offset-sm-1" style={ { borderLeft: "1px solid #000" } }>
-            <img src="https://place-hold.it/200x180" className="img-fluid" />
+          <div className="col-sm-2 offset-sm-1" style={ {
+            borderLeft: "1px solid #000",
+            paddingTop: "1rem",
+            textAlign: "center"
+          } }>
+            <img
+              alt="logo"
+              className="img-fluid"
+              src="https://placehold.co/200x180?text=Лого" />
           </div>
-          <div className="col-sm-2" style={ { borderLeft: "1px solid #000" } }>
-            <img src="https://place-hold.it/200x180" className="img-fluid" />
+          <div className="col-sm-2" style={ {
+            borderLeft: "1px solid #000",
+            paddingTop: "1rem",
+            textAlign: "center"
+          } }>
+            <img
+              alt="logo"
+              className="img-fluid"
+              src="https://placehold.co/200x180?text=Лого" />
           </div>
-          <div className="col-sm-2" style={ { borderLeft: "1px solid #000" } }>
-            <img src="https://place-hold.it/200x180" className="img-fluid" />
+          <div className="col-sm-2" style={ {
+            borderLeft: "1px solid #000",
+            paddingTop: "1rem",
+            textAlign: "center"
+          } }>
+            <img
+              alt="logo"
+              className="img-fluid"
+              src="https://placehold.co/200x180?text=Лого" />
           </div>
-          <div className="col-sm-2" style={ { borderLeft: "1px solid #000" } }>
-            <img src="https://place-hold.it/200x180" className="img-fluid" />
+          <div className="col-sm-2" style={ {
+            borderLeft: "1px solid #000",
+            paddingTop: "1rem",
+            textAlign: "center"
+          } }>
+            <img
+              alt="logo"
+              className="img-fluid"
+              src="https://placehold.co/200x180?text=Лого" />
           </div>
-          <div className="col-sm-2" style={ { borderLeft: "1px solid #000" } }>
-            <img src="https://place-hold.it/200x180" className="img-fluid" />
+          <div className="col-sm-2" style={ {
+            borderLeft: "1px solid #000",
+            paddingTop: "1rem",
+            textAlign: "center"
+          } }>
+            <img
+              alt="logo"
+              className="img-fluid"
+              src="https://placehold.co/200x180?text=Лого" />
           </div>
         </div>
       </section>
@@ -54,7 +98,7 @@ export const App = () => {
         <div className="container-fluid padding-side padding-small pt-0">
           <footer className="row">
             <div className="col-md-6 col-lg-3 mb-4 mb-lg-0">
-              <img src="https://place-hold.it/180x43" alt="logo-footer" className="img-fluid" />
+              <img src="https://placehold.co/180x43?text=Лого" alt="logo-footer" className="img-fluid" />
               <p className="mt-3">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -63,27 +107,27 @@ export const App = () => {
               </p>
               <ul className="social-links d-flex flex-wrap list-unstyled mt-4 mb-0">
                 <li>
-                  <a href="#">
+                  <a href="/">
                     <FontAwesomeIcon icon={ faFacebook } className="icon" style={ { marginRight: "1rem" } } />
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a href="/">
                     <FontAwesomeIcon icon={ faTwitter } className="icon" style={ { marginRight: "1rem" } } />
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a href="/">
                     <FontAwesomeIcon icon={ faLinkedin } className="icon" style={ { marginRight: "1rem" } } />
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a href="/">
                     <FontAwesomeIcon icon={ faInstagram } className="icon" style={ { marginRight: "1rem" } } />
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a href="/">
                     <FontAwesomeIcon icon={ faYoutube } className="icon" />
                   </a>
                 </li>
@@ -127,37 +171,68 @@ export const App = () => {
             <div className="col-md-6 col-lg-3 mb-4 mb-lg-0">
               <h4 className="display-6 fw-normal">Konsepti</h4>
               <ul className="nav flex-column">
-                <li className="nav-item"><a href="#" className="p-0 "> Naše showroomy </a></li>
-                <li className="nav-item"><a href="#" className="p-0 "> O nás </a></li>
-                <li className="nav-item"><a href="#" className="p-0 "> Značky </a></li>
-                <li className="nav-item"><a href="#" className="p-0 "> Realizace </a></li>
-                <li className="nav-item"><a href="#" className="p-0 "> Náš tým </a></li>
-                <li className="nav-item"><a href="#" className="p-0 "> Volná místa </a></li>
+                <li className="nav-item">
+                  <a href="/" className="p-0 "> Naše showroomy </a>
+                </li>
+                <li className="nav-item">
+                  <a href="/" className="p-0 "> O nás </a>
+                </li>
+                <li className="nav-item">
+                  <a href="/" className="p-0 "> Značky </a>
+                </li>
+                <li className="nav-item">
+                  <a href="/" className="p-0 "> Realizace </a>
+                </li>
+                <li className="nav-item">
+                  <a href="/" className="p-0 "> Náš tým </a>
+                </li>
+                <li className="nav-item">
+                  <a href="/" className="p-0 "> Volná místa </a>
+                </li>
               </ul>
             </div>
             <div className="col-md-6 col-lg-3 offset-lg-1 mb-4 mb-lg-0">
               <h4 className="display-6 fw-normal">Služby</h4>
               <ul className="nav flex-column">
-                <li className="nav-item"><a href="#" className="p-0 "> Pronájem Konsepti Stage </a></li>
-                <li className="nav-item"><a href="#" className="p-0 "> Návrhy interiérů </a></li>
-                <li className="nav-item"><a href="#" className="p-0 "> Rekonstrukce a přestavby </a></li>
-                <li className="nav-item"><a href="#" className="p-0 "> B2B projekty </a></li>
-                <li className="nav-item"><a href="#" className="p-0 "> Projekt kuchyně </a></li>
+                <li className="nav-item">
+                  <a href="/" className="p-0 "> Pronájem Konsepti Stage </a>
+                </li>
+                <li className="nav-item">
+                  <a href="/" className="p-0 "> Návrhy interiérů </a></li>
+                <li className="nav-item"><a href="/" className="p-0 "> Rekonstrukce a přestavby </a>
+                </li>
+                <li className="nav-item">
+                  <a href="/" className="p-0 "> B2B projekty </a>
+                </li>
+                <li className="nav-item">
+                  <a href="/" className="p-0 "> Projekt kuchyně </a>
+                </li>
               </ul>
             </div>
             <div className="col-md-6 col-lg-3 offset-lg-1 mb-4 mb-lg-0">
               <h4 className="display-6 fw-normal">Odkazy</h4>
               <ul className="nav flex-column">
-                <li className="nav-item"><a href="#" className="p-0 "> Kontakty </a></li>
-                <li className="nav-item"><a href="#" className="p-0 "> Pro architekty </a></li>
-                <li className="nav-item"><a href="#" className="p-0 "> Obchodní podmínky </a></li>
-                <li className="nav-item"><a href="#" className="p-0 "> Ochrana osobních údajů </a></li>
-                <li className="nav-item"><a href="#" className="p-0 "> Reklamační řád </a></li>
+                <li className="nav-item">
+                  <a href="/" className="p-0 "> Kontakty </a>
+                </li>
+                <li className="nav-item">
+                  <a href="/" className="p-0 "> Pro architekty </a>
+                </li>
+                <li className="nav-item">
+                  <a href="/" className="p-0 "> Obchodní podmínky </a>
+                </li>
+                <li className="nav-item">
+                  <a href="/" className="p-0 "> Ochrana osobních údajů </a>
+                </li>
+                <li className="nav-item">
+                  <a href="/" className="p-0 "> Reklamační řád </a>
+                </li>
               </ul>
             </div>
           </footer>
         </div>
       </section>
+
     </>
   )
 }
