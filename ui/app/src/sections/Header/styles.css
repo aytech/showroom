@@ -30,6 +30,18 @@ button.navbar-toggler:focus {
   box-shadow: none;
 }
 
+@media (min-width: 999px) {
+  .mobile-view-menu {
+    display: none;
+  }
+}
+
+@media (max-width: 999px) {
+  .full-view-menu {
+    display: none;
+  }
+}
+
 .no-decoration-dropdown .dropdown-toggle::after {
   display: none;
 }

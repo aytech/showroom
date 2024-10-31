@@ -94,18 +94,39 @@ export const Header = () => {
                 <Nav.Link href="#" className="px-3" active={ false }>
                   Bestsellery
                 </Nav.Link>
-                <Nav.Link href="#" className="px-3" active={ false }>
+                <Nav.Link
+                  active={ false }
+                  className="px-3 full-view-menu"
+                  href="#">
                   <Dropdown className="no-decoration-dropdown">
                     <Dropdown.Toggle as="a">
                       <span className="fw-bold text-decoration-underline">...</span>
                     </Dropdown.Toggle>
 
                     <Dropdown.Menu>
-                      <Dropdown.Item href="#/action-1">Designéři</Dropdown.Item>
-                      <Dropdown.Item href="#/action-2">Inspirace</Dropdown.Item>
-                      <Dropdown.Item href="#/action-3">Značky</Dropdown.Item>
+                      <Dropdown.Item href="/">Designéři</Dropdown.Item>
+                      <Dropdown.Item href="/">Inspirace</Dropdown.Item>
+                      <Dropdown.Item href="/">Značky</Dropdown.Item>
                     </Dropdown.Menu>
                   </Dropdown>
+                </Nav.Link>
+                <Nav.Link
+                  active={ false }
+                  className="px-3 mobile-view-menu"
+                  href="#">
+                  Designéři
+                </Nav.Link>
+                <Nav.Link
+                  active={ false }
+                  className="px-3 mobile-view-menu"
+                  href="#">
+                  Inspirace
+                </Nav.Link>
+                <Nav.Link
+                  active={ false }
+                  className="px-3 mobile-view-menu"
+                  href="#">
+                  Značky
                 </Nav.Link>
               </Nav>
             </Navbar.Collapse>
@@ -114,9 +135,9 @@ export const Header = () => {
                 <input type="text" className="form-control bg-secondary border-0 rounded-5 px-4 py-2" placeholder="Search..." />
                 <Button
                   className="position-absolute top-50 end-0 translate-middle-y p-1 me-3"
-                  style={ { 
+                  style={ {
                     color: "#212529"
-                   } }
+                  } }
                   variant="link">
                   <FontAwesomeIcon icon={ faMagnifyingGlass } />
                 </Button>
@@ -124,7 +145,7 @@ export const Header = () => {
             </div>
           </Container>
         </Navbar>
-      </header>
+      </header >
     </>
   )
 }
